@@ -1,0 +1,41 @@
+# Ignore raw data
+data/raw_data
+
+# Ignore meta data
+data/meta_data
+
+# Ignore processed data
+data/processed_data
+
+# Ignore motif files
+data/motif_files
+
+# Ignore meta data
+data/meta_data
+
+# Ignore already made figures
+results/figures
+
+# Ignore already made tables
+results/tables
+
+# Ignore already saved r_objects
+results/r_objects
+
+# Ignore config file
+scripts/preprocessing/*.config
+
+# Ignore .R.app.history
+scripts/analysis/diffbind/.Rapp.history
+scripts/analysis/functional_enrichment_analysis/.Rapp.history
+scripts/analysis/homer/.Rapp.history
+
+# Ignore R temporary files
+*.Rhistory
+*.RData
+*.Rproj
+*.Rprofile
+*.RDataTmp
+*.log
+.DS_Store
+.Rproj.user/

@@ -27,7 +27,7 @@ scripts/preprocessing/*.config
 
 # Ignore .R.app.history
 scripts/analysis/diffbind/.Rapp.history
-scripts/analysis/functional_enrichment_analysis/.Rapp.history
+scripts/analysis/functional_enrichment/.Rapp.history
 scripts/analysis/homer/.Rapp.history
 
 # Ignore R temporary files

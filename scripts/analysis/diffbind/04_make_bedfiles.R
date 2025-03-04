@@ -5,7 +5,9 @@ library(tidyverse)
 library(dplyr)
 
 # READ IN DIFFBIND RESULTS: ----------------------------------------------------
-diffbind_res_df <- read.csv(file.path(output_dir_tables, paste0(project, "_diffbind_results.csv")))
+diffbind_res_df <- read.csv(
+  file.path(output_dir_tables, 
+            paste0(project, "_diffbind_results.csv")))
 
 # Create dataframes for CTRL (Fold < 0) keeping only significant peaks 
 # (FDR < 0.05)
@@ -36,4 +38,4 @@ write.table(
   file=file.path(output_dir_tables, filename), 
   sep="\t", quote=F, row.names=F, col.names=F)
 
-print("Bed files saved in data/processed_data/atacseq_e16/diffbind_results_bed")
+print(paste0("Bed files saved in ", output_dir_tables))

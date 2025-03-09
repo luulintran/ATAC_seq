@@ -11,6 +11,9 @@ library(readr)
 # Sample sheet containing paths to filtered bam files and narrowpeak files
 samples <- input_file
 
+samples <- read.csv(input_file)
+
+
 # CREATE DBA OBJECT: -----------------------------------------------------------
 dbObj <- dba(sampleSheet=samples)
 

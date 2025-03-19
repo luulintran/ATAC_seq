@@ -9,7 +9,6 @@ library(readr)
 
 # READ IN DATA:-----------------------------------------------------------------
 # Sample sheet containing paths to filtered bam files and narrowpeak files
-samples <- input_file
 
 samples <- read.csv(input_file)
 

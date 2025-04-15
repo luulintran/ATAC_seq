@@ -4,7 +4,7 @@ This repository contains scripts for running ATAC-seq downstream analysis. It in
 ---
 
 ## Overview
-To preprocess the data from each assay, we used the ATAC-seq (https://nf-co.re/atacseq/2.1.2/) pipeline. Then we performed downstream analysis using the processed data. For ATAC-seq, we used Diffbind (v 3.12.0) (using DESeq2 for differential analysis), ChIPSeeker (v 1.38.0), pheatmap (v 1.012) and clusterProfiler (v 4.10.10) R packages. 
+To preprocess the data from each assay, we used the ATAC-seq (https://nf-co.re/atacseq/2.1.2/) pipeline. Then we performed downstream analysis using the processed data. For ATAC-seq, we used Diffbind (v 3.12.0) (using DESeq2 for differential analysis), ChIPSeeker (v 1.38.0) for differential peak annotation, pheatmap (v 1.012) for generating heatmaps and clusterProfiler (v 4.10.10) for functional enrichment (Gene Ontology, Reactome PA, KEGG). 
 
 ---
 
@@ -54,6 +54,8 @@ Processed data (bam files and peak files) should be put in the `data/processed_d
 The `scripts/analysis/` directory contains scripts for performing downstream analysis using Diffbind, ChIPseeker, clusterProfiler, HOMER, etc.
 
 Within each `analysis` subdirectory, for example `analysis/diffbind`, there will be `config.R` scripts where you can change file paths for input files and output directories, as well as variables, such as control_group and mutant_group.
+
+`scripts/analysis/` contains scripts for differential peak analysis (`diffbind`) and functional enrichment analysis such as Gene Ontology Enrichment Analysis, Reactome Pathway Analysis, and KEGG Pathway Analysis (`functional_enrichment`). These are all done using R. The final directory `homer` contains scripts for Homer motif enrichment analysis using shell scripting.
 
 ## Figures
 
